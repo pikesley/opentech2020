@@ -6,6 +6,7 @@ ENV PROJECT opentech2020
 
 WORKDIR /opt/${PROJECT}
 COPY ${PROJECT} /opt/${PROJECT}
+RUN make install
 
 COPY docker-config/bashrc /root/.bashrc
 

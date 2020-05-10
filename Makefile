@@ -9,8 +9,10 @@ build:
 
 run:
 	docker run \
+		--name opentech \
 		--volume $(shell pwd)/${PROJECT}:/opt/${PROJECT} \
 		--interactive \
+		--publish 8000:8000 \
 		--tty \
 		--rm \
 		${ID} \
