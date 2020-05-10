@@ -1,4 +1,4 @@
-PROJECT = OpenTech
+PROJECT = opentech2020
 ID = pikesley/${PROJECT}
 
 all: build

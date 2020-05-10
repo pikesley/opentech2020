@@ -1,14 +1,11 @@
-FROM python:3.8
+FROM node:stretch
 
 RUN apt-get update && apt-get install -y make
 
-ENV PROJECT OpenTech
+ENV PROJECT opentech2020
 
 WORKDIR /opt/${PROJECT}
 COPY ${PROJECT} /opt/${PROJECT}
-
-RUN pip install --upgrade pip
-RUN make install
 
 COPY docker-config/bashrc /root/.bashrc
 
