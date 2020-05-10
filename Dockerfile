@@ -9,6 +9,7 @@ COPY ${PROJECT} /opt/${PROJECT}
 RUN make install
 
 COPY docker-config/bashrc /root/.bashrc
+RUN ln -s /root/.poetry/bin/poetry /usr/local/bin/
 
 COPY ./entrypoint.sh /usr/local/bin/entrypoint
 RUN chmod +x /usr/local/bin/entrypoint
