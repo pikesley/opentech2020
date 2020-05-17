@@ -18,6 +18,13 @@ run:
 		${ID} \
 		bash
 
+connect:
+	docker exec \
+		--interactive \
+		--tty \
+		opentech \
+		bash
+
 # this is flat-out juju
 # https://stackoverflow.com/a/7367903
 guard-%:
