@@ -4,3 +4,6 @@ install:
 
 run:
 	cd reveal.js && npm start
+
+build:
+	python builder/builder.py
