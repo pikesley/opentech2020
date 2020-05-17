@@ -5,7 +5,8 @@ from shutil import copytree, rmtree
 slides = ''
 template = open('builder/slide.html').read()
 for slide in sorted(listdir('slides')):
-  slides += template.replace('FILENAME', slide)
+  if slide.endswith(".md"):
+    slides += template.replace('FILENAME', slide)
 
 rmtree('reveal.js/slides')
 copytree('slides', 'reveal.js/slides')
